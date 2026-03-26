@@ -39,11 +39,13 @@
             overflow-x: hidden;
             color: var(--dark-color);
         }
-.gradient-text {
-    background: linear-gradient(90deg, #4a1718, #ef5f32);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
+        .gradient-text {
+            background: linear-gradient(90deg, #4a3017, #ef5f32);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         /* Navbar */
         .navbar {
             background: var(--white);
@@ -633,7 +635,7 @@
 
             border-radius: 10px;
 
-            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            background: linear-gradient(135deg, #be6800, #3a70ed);
             color: #fff;
 
             display: flex;
@@ -796,18 +798,19 @@
 
         /* LOGO */
         .footer-logo {
-            max-width: 400px;
+            max-width: 80%;
             height: auto;
+         
         }
 
         /* CONTACT */
         .footer-contact p {
             margin-bottom: 10px;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             color: #111;
-
+            font-weight: 400;
             display: flex;
-            align-items: flex-start;
+            align-items: fc;
             gap: 10px;
         }
 
@@ -828,7 +831,9 @@
         .footer-contact a:hover {
             color: #2563eb;
         }
-
+.footer-contact p {
+    margin-bottom: 15px; /* increase from 10px */
+}
 
         /* MOBILE */
         @media (max-width: 768px) {
@@ -1145,8 +1150,9 @@
 
     <!-- Rankings Section -->
     <section class="rankings-section" id="rankings">
-        <div class="container my-0">
-            <h2 class="section-title fs-2"><span class="fs-5">About</span><br><span class="gradient-text" style="color: #4a1718;">S-VYASA
+        <div class="container">
+            <h2 class="section-title fs-2"><span class="fs-5">About</span><br><span class="gradient-text"
+                    style="color: #4a1718;">S-VYASA
                     Deemed-to-be University</span><br>
                 Sattva Global City Campus, Kengeri, Bengaluru</h2>
             <p class="text-center mb-5">Swami Vivekananda Yoga Anusandhana Samsthana, popularly known as S-VYASA
@@ -1159,7 +1165,7 @@
                 university offers a technology-driven learning environment designed to prepare students for the global
                 digital economy through direct industry exposure and immersive learning experiences.
             </p>
-        
+
             <div class="row mt-5 pt-5">
                 <div class="col-md-3 col-sm-6">
                     <div class="ranking-card">
@@ -1189,12 +1195,12 @@
         </div>
     </section>
 
-    
+
 
     <!-- Courses Section -->
     <section class="courses-section" id="courses">
         <div class="container">
-            <h2 class="section-title"><span class="gradient-text">MBA Courses </span>Offered At S-VYASA University</h2>
+            <h2 class="section-title mt-5"><span class="gradient-text">MBA Courses </span>Offered At S-VYASA University</h2>
 
             <!-- Switch Buttons -->
             <div class="course-switch-container">
@@ -1604,14 +1610,15 @@
 
 
 
-    
+
 
 
 
     <!-- Placements Section -->
     <section class="placements-section" id="placements">
         <div class="container">
-            <h2 class="section-title fs-2">Placements That Prepare You for the Real World at <br> <span class="gradient-text">S-VYASA University, Bangalore</span>
+            <h2 class="section-title fs-2">Placements That Prepare You for the Real World at <br> <span
+                    class="gradient-text">S-VYASA University, Bangalore</span>
             </h2>
             <div class="placements-intro">
                 <p>At S-VYASA, placements are designed to do more than just get you a job. They prepare you for a
@@ -1621,7 +1628,8 @@
                     both in India and globally.</p>
             </div>
 
-            <h4 class="text-center mb-4" style="color: var(--primary-color); font-weight: 600;">Our <span class="gradient-text">Recruitment</span> Partners
+            <h4 class="text-center mb-4" style="color: var(--primary-color); font-weight: 600;">Our <span
+                    class="gradient-text">Recruitment</span> Partners
             </h4>
 
             <!-- Company Carousel Container -->
@@ -1633,14 +1641,12 @@
 
                         <!-- Cards -->
                         <div class="company-card"><img src="placements/AIROH.svg"></div>
-                        <div class="company-card"><img src="placements/arrow-up-right-square-fill.svg"></div>
                         <div class="company-card"><img src="placements/Coca-Cola.svg"></div>
                         <div class="company-card"><img src="placements/OLA.svg"></div>
                         <div class="company-card"><img src="placements/Oracle.svg"></div>
                         <div class="company-card"><img src="placements/OYO.svg"></div>
                         <div class="company-card"><img src="placements/Paytm.svg"></div>
                         <div class="company-card"><img src="placements/Peoples Group.svg"></div>
-
                         <div class="company-card"><img src="placements/Pernod Ricard.svg"></div>
                         <div class="company-card"><img src="placements/PhonePe.svg"></div>
                         <div class="company-card"><img src="placements/Progress.svg"></div>
@@ -1669,7 +1675,8 @@
     <!-- Why Section -->
     <section class="why-section mt-4" id="why">
         <div class="container">
-            <h2 class="section-title fs-2"><span class="gradient-text" style="color: #4a1718;">Why Pursue</span> MBA at S-VYASA University?</h2>
+            <h2 class="section-title fs-2"><span class="gradient-text" style="color: #4a1718;">Why Pursue</span> MBA at
+                S-VYASA University?</h2>
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <div class="why-content">
@@ -1735,10 +1742,10 @@
             }
 
             .accordion-button {
-                background: #51121220;
+                background: #eaeaea;
                 color: #111;
                 font-weight: 600;
-                font-size: 1rem;
+                font-size: 1.1rem;
                 padding: 18px 20px;
                 border: none;
             }
@@ -1784,7 +1791,8 @@
 
                 <!-- LEFT SIDE -->
                 <div class="faq-left">
-                    <h2><span class="gradient-text">F</span>requently<br> <span class="gradient-text">A</span>sked <br><span class="gradient-text">Q</span>uestions</h2>
+                    <h2><span class="gradient-text">F</span>requently<br> <span class="gradient-text">A</span>sked
+                        <br><span class="gradient-text">Q</span>uestions</h2>
                 </div>
 
                 <!-- RIGHT SIDE -->
@@ -1879,11 +1887,11 @@
     <!-- Footer -->
     <!-- FOOTER -->
     <footer class="footer-section">
-        <div class="container">
-            <div class="row align-items-center gy-4">
+        <div class="container px-5">
+            <div class="row align-items-center gy-4 gx-5">
 
                 <!-- LEFT: LOGO -->
-                <div class="col-lg-6 col-md-12 text-center text-lg-start">
+                <div class="col-lg-6 col-md-12 text-center text-lg-center">
                     <img src="media/SVYASA -Logo.png" alt="S-VYASA" class="footer-logo">
                 </div>
 
@@ -1893,7 +1901,7 @@
 
                         <p>
                             <i class="bi bi-geo-alt"></i>
-                            Mysore Road, RV Vidyaniketan, Rajarajeshwari Nagar,
+                            Mysore Road, RV Vidyaniketan, Rajarajeshwari Nagar,<br>
                             Bengaluru, Karnataka - 560059
                         </p>
 
