@@ -39,7 +39,11 @@
             overflow-x: hidden;
             color: var(--dark-color);
         }
-
+.gradient-text {
+    background: linear-gradient(90deg, #4a1718, #ef5f32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
         /* Navbar */
         .navbar {
             background: var(--white);
@@ -191,7 +195,7 @@
 
         /* Rankings Section */
         .rankings-section {
-            padding: 80px 0;
+            padding: 40px 0;
             background: var(--light-bg);
         }
 
@@ -199,17 +203,36 @@
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--primary-color);
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             text-align: center;
         }
 
         .ranking-card {
             height: 125px;
             display: flex;
+            flex-direction: column;
+            gap: 40px;
             align-items: center;
             justify-content: center;
             border-radius: 12px;
             padding: 15px;
+        }
+
+        .ranking-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: rgb(20, 47, 113);
+            margin-top: 10px;
+            text-align: center;
+            letter-spacing: 0.6px;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect */
+        .ranking-card:hover h4 {
+            opacity: 1;
+            transform: translateY(-2px);
         }
 
         /* Icon wrapper */
@@ -571,7 +594,7 @@
 
         /* SECTION */
         .highlights-section {
-            padding: 100px 0;
+            padding: 50px 0;
             background: linear-gradient(to bottom, #f9fafb, #ffffff);
         }
 
@@ -749,7 +772,7 @@
         #carouselPrev,
         #carouselNext {
             border: none;
-            background: #111;
+            background: #11111169;
             color: #fff;
             width: 35px;
             height: 35px;
@@ -1122,58 +1145,56 @@
 
     <!-- Rankings Section -->
     <section class="rankings-section" id="rankings">
-        <div class="container">
-            <h2 class="section-title fs-2">S-VYASA University Rankings & Accreditations</h2>
-            <div class="row g-4">
+        <div class="container my-0">
+            <h2 class="section-title fs-2"><span class="fs-5">About</span><br><span class="gradient-text" style="color: #4a1718;">S-VYASA
+                    Deemed-to-be University</span><br>
+                Sattva Global City Campus, Kengeri, Bengaluru</h2>
+            <p class="text-center mb-5">Swami Vivekananda Yoga Anusandhana Samsthana, popularly known as S-VYASA
+                University, is a UGC-approved
+                Deemed-to-be University. The institution adopts a comprehensive approach to delivering quality education
+                and training, while actively advancing research across a diverse range of disciplines.
+                <br><br>
+                The School of Advanced Studies at S-VYASA University is committed to instilling core values that help
+                shape individuals into future-ready professionals. With NAAC A+ accreditation and AICTE approval, the
+                university offers a technology-driven learning environment designed to prepare students for the global
+                digital economy through direct industry exposure and immersive learning experiences.
+            </p>
+        
+            <div class="row mt-5 pt-5">
                 <div class="col-md-3 col-sm-6">
                     <div class="ranking-card">
                         <div class="ranking-icon"><img src="randking-media/AICTE.png" alt=""></div>
+                        <h4>AICTE Approved</h4>
                     </div>
-
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="ranking-card">
                         <div class="ranking-icon"><img src="randking-media/ksurf.jpg" alt=""></div>
+                        <h4>4 Star rating by Karnataka State Universities Rating</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="ranking-card">
                         <div class="ranking-icon"><img src="randking-media/NAAC A+.png" alt=""></div>
+                        <h4>NAAC A+ Grade</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="ranking-card">
                         <div class="ranking-icon"><img src="randking-media/UGC.png" alt=""></div>
+                        <h4>#1 University by the University Grants Commission</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Section -->
-    <section class="why-section" id="why">
-        <div class="container">
-            <h2 class="section-title fs-2">Why Pursue MBA at S-VYASA University?</h2>
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <div class="why-content">
-                        <p>The School of Advanced Studies at S-VYASA University, Bangalore, is designed for students who
-                            want more than just a degree. With a strong focus on career outcomes, the university blends
-                            academic depth with real-world exposure through internships, industry projects, and hands-on
-                            learning environments. From modern infrastructure to a future-focused curriculum, everything
-                            here is built to prepare you for a global career.
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Courses Section -->
     <section class="courses-section" id="courses">
         <div class="container">
-            <h2 class="section-title">MBA Courses Offered At S-VYASA University</h2>
+            <h2 class="section-title"><span class="gradient-text">MBA Courses </span>Offered At S-VYASA University</h2>
 
             <!-- Switch Buttons -->
             <div class="course-switch-container">
@@ -1405,7 +1426,7 @@
     <!-- Highlights Section -->
     <section class="highlights-section" id="highlights">
         <div class="container">
-            <h2 class="section-title">Programme Highlights</h2>
+            <h2 class="section-title"><span class="gradient-text">Programme</span> Highlights</h2>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
                     <div class="highlight-card">
@@ -1580,10 +1601,17 @@
         }
     </style>
 
+
+
+
+    
+
+
+
     <!-- Placements Section -->
     <section class="placements-section" id="placements">
         <div class="container">
-            <h2 class="section-title">Placements That Prepare You for the Real World at S-VYASA University, Bangalore
+            <h2 class="section-title fs-2">Placements That Prepare You for the Real World at <br> <span class="gradient-text">S-VYASA University, Bangalore</span>
             </h2>
             <div class="placements-intro">
                 <p>At S-VYASA, placements are designed to do more than just get you a job. They prepare you for a
@@ -1593,7 +1621,7 @@
                     both in India and globally.</p>
             </div>
 
-            <h4 class="text-center mb-4" style="color: var(--primary-color); font-weight: 600;">Our Recruitment Partners
+            <h4 class="text-center mb-4" style="color: var(--primary-color); font-weight: 600;">Our <span class="gradient-text">Recruitment</span> Partners
             </h4>
 
             <!-- Company Carousel Container -->
@@ -1637,12 +1665,33 @@
         </div>
     </section>
 
+
+    <!-- Why Section -->
+    <section class="why-section mt-4" id="why">
+        <div class="container">
+            <h2 class="section-title fs-2"><span class="gradient-text" style="color: #4a1718;">Why Pursue</span> MBA at S-VYASA University?</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="why-content">
+                        <p>The School of Advanced Studies at S-VYASA University, Bangalore, is designed for students who
+                            want more than just a degree. With a strong focus on career outcomes, the university blends
+                            academic depth with real-world exposure through internships, industry projects, and hands-on
+                            learning environments. From modern infrastructure to a future-focused curriculum, everything
+                            here is built to prepare you for a global career.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FAQ SECTION -->
     <section class="faq-section" id="faq">
 
         <style>
             .faq-section {
-                padding: 100px 0;
+                padding: 70px 0;
                 background: #f9fafb;
             }
 
@@ -1735,7 +1784,7 @@
 
                 <!-- LEFT SIDE -->
                 <div class="faq-left">
-                    <h2>Frequently<br> Asked <br>Questions</h2>
+                    <h2><span class="gradient-text">F</span>requently<br> <span class="gradient-text">A</span>sked <br><span class="gradient-text">Q</span>uestions</h2>
                 </div>
 
                 <!-- RIGHT SIDE -->
