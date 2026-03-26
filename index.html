@@ -800,7 +800,7 @@
         .footer-logo {
             max-width: 80%;
             height: auto;
-         
+
         }
 
         /* CONTACT */
@@ -808,7 +808,7 @@
             margin-bottom: 10px;
             font-size: 1.1rem;
             color: #111;
-            font-weight: 400;
+            font-weight: 500;
             display: flex;
             align-items: fc;
             gap: 10px;
@@ -831,9 +831,11 @@
         .footer-contact a:hover {
             color: #2563eb;
         }
-.footer-contact p {
-    margin-bottom: 15px; /* increase from 10px */
-}
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            /* increase from 10px */
+        }
 
         /* MOBILE */
         @media (max-width: 768px) {
@@ -998,7 +1000,7 @@
                 <div class="col-lg-6 hero-content mb-4 mb-lg-0">
                     <div class="admission-badge">
                         <span class="dot"></span>
-                        <p>Admissions Open for MBA 2025–26</p>
+                        <p>Admissions Open for MBA 2026–27</p>
                     </div>
                     <style>
                         .admission-badge {
@@ -1071,7 +1073,7 @@
                             }
                         }
                     </style>
-                    <h1 class="fade-in-up">Master Business. Not Just an MBA.</h1>
+                    <h1 class="fade-in-up">Master Business <br>Not Just an MBA</h1>
                     <p class="fade-in-up">Build real-world skills, gain industry exposure, and step into leadership
                         roles with S-VYASA’s career-first MBA in Bangalore.</p>
 
@@ -1098,27 +1100,21 @@
                             <div class="form-row">
                                 <input type="text" class="form-control" placeholder="State *" required>
 
-                                <select class="form-select" required>
+                                <select class="form-select" id="courseSelect" onchange="updateSpecialization()"
+                                    required>
                                     <option value="">Course *</option>
-                                    <option>MBA</option>
-                                    <option>MBA PRO</option>
-                                    <option>Dual Specialisation MBA</option>
+                                    <option value="mba">MBA PRO</option>
+                                    <option value="dual">Dual Specialisation MBA</option>
                                 </select>
 
-                                <select class="form-select" required>
+                                <select class="form-select" id="specializationSelect" required>
                                     <option value="">Specialization *</option>
-                                    <option>MBA PRO – Marketing, Finance and Business Analytics</option>
-                                    <option>MBA PRO – Hospital Administration with Medical Tourism</option>
-                                    <option>MBA PRO – Logistics and Supply Chain Management</option>
-                                    <option>MBA PRO – Digital Business Management and Data Analytics</option>
-                                    <option>MBA PRO – AI and Data Analytics</option>
-                                    <option>MBA – Dual Specialisation</option>
                                 </select>
                             </div>
 
                             <!-- Message -->
                             <div class="mb-3">
-                                <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+                                <textarea class="form-control" rows="3" placeholder="Message (optional)"></textarea>
                             </div>
 
                             <!-- Button -->
@@ -1200,7 +1196,8 @@
     <!-- Courses Section -->
     <section class="courses-section" id="courses">
         <div class="container">
-            <h2 class="section-title mt-5"><span class="gradient-text">MBA Courses </span>Offered At S-VYASA University</h2>
+            <h2 class="section-title mt-5"><span class="gradient-text">MBA Courses </span>Offered At S-VYASA University
+            </h2>
 
             <!-- Switch Buttons -->
             <div class="course-switch-container">
@@ -1369,7 +1366,7 @@
 
                         <!-- Specializations -->
                         <div class="specialization-list mb-3">
-                            <h5>After completing core courses students can choose from one of the add-on specialisations
+                            <h5>After completing core courses students can choose from two of the add-on specialisations
                                 available:</h5>
 
                             <ul class="spec-grid">
@@ -1792,7 +1789,8 @@
                 <!-- LEFT SIDE -->
                 <div class="faq-left">
                     <h2><span class="gradient-text">F</span>requently<br> <span class="gradient-text">A</span>sked
-                        <br><span class="gradient-text">Q</span>uestions</h2>
+                        <br><span class="gradient-text">Q</span>uestions
+                    </h2>
                 </div>
 
                 <!-- RIGHT SIDE -->
@@ -1926,6 +1924,35 @@
     </footer>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        function updateSpecialization() {
+            var course = document.getElementById("courseSelect").value;
+            var spec = document.getElementById("specializationSelect");
+
+            // reset options
+            spec.innerHTML = '<option value="">Specialization *</option>';
+
+            if (course === "mba") {
+                spec.innerHTML += '<option>Marketing, Finance and Business Analytics</option>';
+                spec.innerHTML += '<option>Hospital Administration with Medical Tourism</option>';
+                spec.innerHTML += '<option>Logistics and Supply Chain Management</option>';
+                spec.innerHTML += '<option>Digital Business Management and Data Analytics</option>';
+                spec.innerHTML += '<option>AI and Data Analytics</option>';
+            }
+
+            if (course === "dual") {
+                spec.innerHTML += '<option>Marketing + Finance</option>';
+                 spec.innerHTML += '<option>HR + Operations</option>';
+                  spec.innerHTML += '<option>Finance + Business Analytics</option>';
+                   spec.innerHTML += '<option>International Business + Operations</option>';
+           
+                
+
+            }
+        }
+    </script>
 
     <!-- Custom JS -->
     <script>
